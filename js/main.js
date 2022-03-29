@@ -18,9 +18,12 @@ function copy_wrap(){
     $('.items').children[0].children[0].children[0].children[0].children[1]
     $('.items').children[0].children[0].children[0].children[0].children[2]
 
-
     let item_arr = [];
     let arr = $('.items').children;
+    let json = "";
+
+    item_arr = [];
+    arr = $('.items').children;
     arr.forEach(function(val,i){
         let sub_arr = val.children[0].children
         sub_arr.forEach(function(item,i){
@@ -35,6 +38,6 @@ function copy_wrap(){
             item_arr.push(a);
         })
     });
-    let json = JSON.stringify(item_arr);
+    json = JSON.stringify(item_arr);
     
 }
