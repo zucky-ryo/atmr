@@ -19,20 +19,22 @@ function copy_wrap(){
     $('.items').children[0].children[0].children[0].children[0].children[2]
 
 
-
     let item_arr = [];
-    const arr = $('.items').children;
+    let arr = $('.items').children;
     arr.forEach(function(val,i){
-        let a = new Object();
-        a.name = val.children[0].children[0].children[0].children[0].textContent;
-        a.img = val.children[0].children[0].children[0].children[1].src;
-        if(val.children[0].children[0].children[0].children.length == 3){
-            a.type = val.children[0].children[0].children[0].children[2].textContent;
-        }else{
-            a.s_img = val.children[0].children[0].children[0].children[2].src;
-            a.type = val.children[0].children[0].children[0].children[3].textContent;
-        }
-        item_arr.push(a);
+        let sub_arr = val.children[0].children
+        sub_arr.forEach(function(item,i){
+            let a = new Object();
+            a.name = item.children[0].children[0].textContent;
+            a.img = item.children[0].children[1].src;
+            if(item.children[0].children.length == 3){
+                a.type = item.children[0].children[2].textContent;
+            }else{
+                a.type = item.children[0].children[3].textContent;
+            }
+            item_arr.push(a);
+        })
     });
+    let json = JSON.stringify(item_arr);
     
 }
