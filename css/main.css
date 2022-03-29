@@ -1,0 +1,145 @@
+html {
+	margin:0;
+	padding:0;
+}
+
+body {
+	margin:0;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.word-break {
+	word-break: break-all;
+}
+
+.btn-outline-lightgray {
+	color: lightgray;
+	border-color: lightgray;
+}
+
+.bg-pastel-green{
+	background-color: #6cbb5a;
+}
+
+.border-pastel-green{
+	border-color: #6cbb5a!important;
+}
+
+.bg-light-orange {
+	background-color: #fff2e5;
+}
+
+.bg-orange {
+	background-color: #ff9b38;
+}
+
+.border-pastel-orange {
+	border-color: #ffbf7f!important;
+}
+
+.border-orange {
+	border-color: #ff9b38!important;
+}
+
+.btn-orange {
+	color: #fff;
+    background-color: #ff7f00;
+    border-color: #ff7f00;
+}
+
+.btn-outline-orange {
+    color: #ff7f00;
+    border-color: #ff7f00;
+}
+
+.bg-light-yellow{
+	background-color: #fffff4;
+}
+
+.border-light-yellow{
+	border-color: #fffff4!important;
+}
+
+.bg-pastel-yellow{
+	background-color: #ffffe5;
+}
+
+.border-pastel-yellow{
+	border-color: #ffffe5!important;
+}
+.modal-dialog-xl{
+	max-width: inherit;
+	width: 70%;
+}
+
+.modal-dialog-fluid {
+	max-width: inherit;
+	width: 98%;
+	margin-left: 15px;
+}
+
+.hover {
+	background-color: lightgray;
+}
+
+.textarea {
+	height: calc( 1.3em * 4 )!important;
+	line-height: 1.3;
+}
+
+.align-h {
+	height: 100%;
+}
+
+.nobr {
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nobr-2 {
+    overflow: hidden;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.nobr-4 {
+    overflow: hidden;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+.btn-no-hover:hover {
+	color: lightgray;
+}
+
+.file-after::after {
+	content: "ファイル選択";
+}
+
+.side-auto-scroll {
+	white-space: nowrap;
+	animation: scrollAnime 10s linear infinite;
+}
+@keyframes scrollAnime{
+    0% {transform: translateX(0)}
+  100% {transform: translateX(-100%)}
+}
+
+/* .dragging {
+	border: solid 1px black;
+} */
+
+.hidden-scroll {
+	overflow-y: scroll;
+	-ms-overflow-style: none;    /* IE, Edge 対応 */
+	scrollbar-width: none;       /* Firefox 対応 */
+}
+.hidden-scroll::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+	display:none;
+}

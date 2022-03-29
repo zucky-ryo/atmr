@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DDアプリ</title>
+	<script src="./js/jquery-3.5.1.min.js"></script>
+	<script src="./js/jquery.blockUI.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/encoding.js"></script>
+	<script src="./js/main.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+	<div id='nav_div'>
+		<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" id='main_nav'>
+			<a class="navbar-brand" href="#">DDアプリ管理</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="main_menu">
+				<ul class='navbar-nav mr-auto'>
+					<li class='nav-item dropdown'>
+						<a href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>
+							アプリ管理メニュー
+						</a>
+						<div class='dropdown-menu' aria-labelledby='navbarDropdown'>
+							<a class='dropdown-item' href='#' onClick='show_page("mainte_banner");'>バナー設定</a>
+							<a class='dropdown-item' href='#' onClick='show_page("mainte_banner_exec");'>リンク設定</a>
+							<a class='dropdown-item' href='#' onClick='show_page("mainte_coupon");'>クーポン設定</a>
+							<a class='dropdown-item' href='#' onClick='show_page("mainte_push_info");'>プッシュ通知設定</a>
+							<a class='dropdown-item' href='#' onClick='show_page("mainte_flyer");'>チラシ設定</a>
+							<a class='dropdown-item' href='#' onClick='show_page("mainte_shop");'>店舗設定</a>
+							<a class='dropdown-item' href='#' onClick='show_page("mainte_info");'>お知らせ設定</a>
+						</div>
+					</li>
+				</ul>
+				<!-- <ul class='navbar-nav ml-auto' id='management_menu'>
+					<li class='nav-item dropdown'>
+						<a href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>
+							管理者メニュー
+						</a>
+						<div class='dropdown-menu' aria-labelledby='navbarDropdown'>
+							<a class='dropdown-item' href='#' onClick='show_page("mainte_banner_exec");'>バナー動作設定</a>
+						</div>
+					</li>
+				</ul> -->
+			</div>
+		</nav>
+	</div>
+	<div id="bread" style="margin-top: 55px;">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item active">アプリ管理メニュー</li>
+				<li class="breadcrumb-item" id="page_title"></li>
+			</ol>
+		</nav>
+	</div>
+	<div id='main_div' class='container-fluid'>
+	</div>
+	<div class='d-flex justify-content-center h1 font-weight-bold font-italic mt-4' id='main_name'>
+		DDアプリ管理システム
+	</div>
+
+	<div>
+
+	</div>
+
+	<!-- モーダルダイアログ -->
+	<div id='modal' class='modal fade'>
+		<div class='modal-dialog modal-xl'>
+			<div class='modal-content'>
+				<div class='modal-header' id='modal_header'>
+					<h5 id="modal_title" class="modal-title">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class='modal-body' id='modal_body'></div>
+				<div class='modal-footer' id='modal_foot'>
+					<button type='button' class='btn btn-default btn-outline-dark' data-dismiss='modal'>閉じる</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='big_modal' class='modal fade'>
+		<div class='modal-dialog modal-dialog-fluid'>
+			<div class='modal-content'>
+				<div class='modal-header'>
+					<h5 id="big_modal_title" class="modal-title">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class='modal-body' id='big_modal_body'></div>
+				<div class='modal-footer' id='big_modal_foot'>
+					<button type='button' class='btn btn-default btn-outline-dark' data-dismiss='modal'>閉じる</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='sub_modal' class='modal fade'>
+		<div class='modal-dialog modal-xl'>
+			<div class='modal-content'>
+				<div class='modal-header'>
+					<h5 id="sub_modal_title" class="modal-title">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class='modal-body' id='sub_modal_body'></div>
+				<!-- <div class='modal-footer' id='sub_modal_foot'>
+					<button type='button' class='btn btn-default btn-outline-dark' data-dismiss='modal'>閉じる</button>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div id='preview_modal' class='modal fade'>
+		<div class='modal-dialog modal-xl'>
+			<div class='modal-content'>
+				<div class='modal-header' id='preview_modal_header'>
+					<h5 id="preview_modal_title" class="modal-title">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class='modal-body' id='preview_modal_body'></div>
+				<div class='modal-footer' id='preview_modal_foot'>
+					<button type='button' class='btn btn-default btn-outline-dark' data-dismiss='modal'>閉じる</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
