@@ -1,4 +1,6 @@
 <?php
+    require_once '../class/item.php';
+    
     function getItem($type,$s_type){
         $item = new Item;
         $items = $item->getAllData();
