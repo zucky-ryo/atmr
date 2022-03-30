@@ -1,9 +1,11 @@
 $(function() {
 	$.ajaxSetup({ cache: false });
+    console.log('aaa');
     show_page(0,1);
 });
 
 function show_page(type=0,s_type=""){
+    console.log('ddd');
     $.ajax({
         type : "get",
         url  : "./controller/api.php",
@@ -14,9 +16,11 @@ function show_page(type=0,s_type=""){
         },
         dataType : 'json',
         success : function(data){
+            console.log('bbb');
             $('#main_div').html(data['html']);
         },
         error : function(err){
+            console.log('ccc');
 
         }
     });
