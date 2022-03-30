@@ -90,14 +90,14 @@
     $text = file_get_contents('../data/kasa.txt');
     $arr = json_decode(json_decode($text,true),true);
     foreach($arr as $key => $val){
-        $ins_str .= sprintf("(1,8,'%s','%s','%s')",$val['name'],$val['img'],$val['type']);
+        $ins_str .= sprintf("(1,8,'%s','%s','%s'),",$val['name'],$val['img'],$val['type']);
     }
 
-    // $text = file_get_contents('../data/fassionsonota.txt');
-    // $arr = json_decode(json_decode($text,true),true);
-    // foreach($arr as $key => $val){
-    //     $ins_str .= sprintf("(1,9,'%s','%s','%s')",$val['name'],$val['img'],$val['type']);
-    // }
+    $text = file_get_contents('../data/fassionsonota.txt');
+    $arr = json_decode(json_decode($text,true),true);
+    foreach($arr as $key => $val){
+        $ins_str .= sprintf("(1,9,'%s','%s','%s');",$val['name'],$val['img'],$val['type']);
+    }
 
     $ins_res = mysqli_query($conn,$ins_str);
 
