@@ -2,9 +2,9 @@
     require_once './items.php';
 
     $deb = "";
-    if($_POST['sw'] == "show_page"){
-        $type = $_POST['type'];
-        $s_type = $_POST['s_type'];
+    if($_GET['sw'] == "show_page"){
+        $type = $_GET['type'];
+        $s_type = $_GET['s_type'];
         $items = getItem($type,$s_type);
 
         $html = "";
