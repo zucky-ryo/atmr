@@ -1,23 +1,28 @@
 $(function() {
 	$.ajaxSetup({ cache: false });
+    show_page(0,1);
 });
 
-function copy_wrap(){
+function show_page(type=0,s_type=""){
     $.ajax({
-        url: 'https://ysds.github.io/acnh-gachi-complete/',
-        cache: false,
-        datatype: 'html',
-        success: function(html){
-            const h = $(html).find('#app');
-            $('#copy_wrap').append(h);
+        type : "get",
+        url  : "./controller/items.php",
+        data : {
+            'sw'     : "show_page",
+            'type'   : type,
+            's_type' : s_type
+        },
+        dataType : 'json',
+        success : function(data){
+            $('#main_div').html(data['html']);
+        },
+        error : function(err){
+
         }
     });
+}
 
-
-    $('.items').children[0].children[0].children[0].children[0].children[0]
-    $('.items').children[0].children[0].children[0].children[0].children[1]
-    $('.items').children[0].children[0].children[0].children[0].children[2]
-
+function copy_wrap(){
     let item_arr = [];
     let arr = $('.items').children;
     let json = "";
