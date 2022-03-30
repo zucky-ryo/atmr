@@ -6,7 +6,7 @@ $(function() {
 function show_page(type=0,s_type=""){
     $.ajax({
         type : "get",
-        url  : "./controller/items.php",
+        url  : "./controller/api.php",
         data : {
             'sw'     : "show_page",
             'type'   : type,
