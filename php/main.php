@@ -101,4 +101,9 @@
 
     $ins_res = mysqli_query($conn,$ins_str);
 
+    if($ins_res){        echo "success";
+    }else{
+        echo mysqli_error($conn);
+    }
+    
 ?>
