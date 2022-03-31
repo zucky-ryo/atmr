@@ -1,4 +1,6 @@
 <?php
+    require_once __DIR__.'/../class/database.php';
+
     class Item extends Database{
         public $id;
         public $type;
