@@ -4,7 +4,7 @@ $(function() {
 });
 
 function show_page(type=0,s_type=""){
-    $.blockUI({message:'しばらくお待ちください',baseZ: 9999});
+    $.blockUI({message:'読み込み中',baseZ: 9999});
     $.ajax({
         type : "get",
         url  : "./controller/api.php",
