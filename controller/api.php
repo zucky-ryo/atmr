@@ -1,13 +1,20 @@
 <?php
     require_once __DIR__.'/../controller/items.php';
+    require_once __DIR__.'/../lib/master.php';
 
     $deb = "デバッグ";
     if($_GET['sw'] == "show_page"){
         $type = $_GET['type'];
         $s_type = $_GET['s_type'];
         $items = getItem($type,$s_type);
-
+        $menu_str = "type_".$type."_arr";
+        
         $html = "";
+        $html .= sprintf("<div class='d-flex scroll_x'>");
+        foreach($$menu_str as $menu){
+            $html .= sprintf("<div>%s</div>",$menu);
+        }
+        $html .= sprintf("</div>");
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class='row'>");
         $html .= sprintf("<div class='col-2 bg-primary'></div>");
