@@ -25,17 +25,13 @@
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class='row'>");
         $html .= sprintf("<div class='col-12'>");
-        $html .= sprintf("<div class='row bg-light'>");
+        $html .= sprintf("<div class='d-flex flex-wrap-wrap bg-light'>");
         foreach($items as $i => $item){
-            if($i % 7 == 0 || $i % 7 == 6){
-                $html .= sprintf("<div class='col-1'></div>");
-            }else{
-                $html .= sprintf("<div class='col-xl-1 col-2 border border-white px-1'>");
-                $html .= sprintf("<div class='py-1' style='font-size: 10px; font-weight: bold;'>%s</div>",$item['name']);
-                $html .= sprintf("<div class='d-flex justify-content-center'><img data-src='%s' class='lazyload' width='80%%' height='100%%'></div>",$item['img'],$item['img']);
-                $html .= sprintf("<div class='text-center mb-1' style='font-size: 10px;'>%s</div>",$item['color']);
-                $html .= sprintf("</div>");
-            }
+            $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;'>");
+            $html .= sprintf("<div class='py-1' style='font-size: 10px; font-weight: bold;'>%s</div>",$item['name']);
+            $html .= sprintf("<div class='d-flex justify-content-center'><img data-src='%s' class='lazyload' width='80%%' height='100%%'></div>",$item['img'],$item['img']);
+            $html .= sprintf("<div class='text-center mb-1' style='font-size: 10px;'>%s</div>",$item['color']);
+            $html .= sprintf("</div>");
         }
         $html .= sprintf("</div>");
         $html .= sprintf("</div>");
