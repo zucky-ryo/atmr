@@ -25,7 +25,7 @@
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class='row'>");
         $html .= sprintf("<div class='col-12'>");
-        $html .= sprintf("<div class='bg-light'>");
+        $html .= sprintf("<div class='d-flex bg-light'>");
         foreach($items as $item){
             // $html .= sprintf("<div class='col-xl-1 col-md-2 col-3 border border-white px-1'>");
             $html .= sprintf("<div class='border border-white px-1' style='width:20%%;'>");
