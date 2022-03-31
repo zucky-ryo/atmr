@@ -23,8 +23,8 @@
         }
         $html .= sprintf("</div>");
         $html .= sprintf("<div class=''>");
-        $html .= sprintf("<div class='row'>");
-        $html .= sprintf("<div class='col-12'>");
+        $html .= sprintf("<div class=''>");
+        $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class='d-flex flex-wrap bg-light'>");
         foreach($items as $i => $item){
             $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;'>");
