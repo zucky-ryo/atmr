@@ -14,7 +14,7 @@
         $html .= sprintf("<div class='col-10'>");
         $html .= sprintf("<div class='row bg-light'>");
         foreach($items as $item){
-            $html .= sprintf("<div class='col-md-2 col-3 border border-white'>");
+            $html .= sprintf("<div class='col-xl-1 col-md-2 col-3 border border-white'>");
             $html .= sprintf("<div class='py-1' style='font-size: 8px; font-weight: bold;'>%s</div>",$item['name']);
             $html .= sprintf("<div><img data-src='%s' class='lazyload' width='100%%' height='100%%'></div>",$item['img'],$item['img']);
             $html .= sprintf("<div class='text-center py-1' style='font-size: 8px;'>%s</div>",$item['color']);
