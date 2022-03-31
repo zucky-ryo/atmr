@@ -17,7 +17,7 @@
             $html .= sprintf("<div class='col-3 border border-white'>");
             $html .= sprintf("<div class='py-1' style='font-size: 8px; font-weight: bold;'>%s</div>",$item['name']);
             $html .= sprintf("<div><img src='%s' width='100%%'></div>",$item['img']);
-            $html .= sprintf("<div class='py-1' style='text-center font-size: 8px;'>%s</div>",$item['color']);
+            $html .= sprintf("<div class='text-center py-1' style='font-size: 8px;'>%s</div>",$item['color']);
             $html .= sprintf("</div>");
         }
         $html .= sprintf("</div>");
