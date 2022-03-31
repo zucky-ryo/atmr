@@ -10,7 +10,7 @@
         $menu_str = "type_".$type."_arr";
         
         $html = "";
-        $html .= sprintf("<div class='d-flex scroll_x' style='height: 35px;'>");
+        $html .= sprintf("<div class='d-flex scroll_x' style='height: 30px;'>");
         foreach($$menu_str as $menu){
             $html .= sprintf("<div class='mx-1 px-2 text-center border border-success rounded-pill'>%s</div>",$menu);
         }
