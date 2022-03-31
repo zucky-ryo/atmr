@@ -14,11 +14,10 @@ function show_page(type=0,s_type=""){
         },
         dataType : 'json',
         success : function(data){
-            console.log('bbb');
             $('#main_div').html(data['html']);
         },
         error : function(err){
-            console.log('ccc');
+            
         }
     });
 }
