@@ -16,6 +16,7 @@ body {
 }
 
 .scroll_x {
+	white-space: nowrap;
 	overflow-x: scroll;
 	-ms-overflow-style: none;    /* IE, Edge 対応 */
 	scrollbar-width: none;       /* Firefox 対応 */
@@ -25,6 +26,7 @@ body {
 }
 
 .scroll_y {
+	white-space: nowrap;
 	overflow-y: scroll;
 	-ms-overflow-style: none;    /* IE, Edge 対応 */
 	scrollbar-width: none;       /* Firefox 対応 */
