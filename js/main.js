@@ -1,6 +1,6 @@
 $(function() {
 	$.ajaxSetup({ cache: false });
-    $('img.lazy').lazyload();
+    // $('img.lazy').lazyload();
     show_page(0,1);
 });
 
