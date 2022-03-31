@@ -10,13 +10,18 @@
         $html = "";
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class='row'>");
+        $html .= sprintf("<div class='col-2 bg-primary'></div>");
+        $html .= sprintf("<div class='col-10'>");
+        $html .= sprintf("<div class='row'>");
         foreach($items as $item){
-            $html .= sprintf("<div class='col-2'>");
+            $html .= sprintf("<div class='col-3'>");
             $html .= sprintf("<div style='font-size: 8px; font-weight: bold;'>%s</div>",$item['name']);
             $html .= sprintf("<div><img src='%s' width='100%%'></div>",$item['img']);
             $html .= sprintf("<div style='font-size: 8px; font-weight: bold;'>%s</div>",$item['color']);
             $html .= sprintf("</div>");
         }
+        $html .= sprintf("</div>");
+        $html .= sprintf("</div>");
         $html .= sprintf("</div>");
         $html .= sprintf("</div>");
 
