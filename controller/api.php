@@ -12,7 +12,7 @@
         $html = "";
         $html .= sprintf("<div class='d-flex scroll_x'>");
         foreach($$menu_str as $menu){
-            $html .= sprintf("<div class='mx-1 px-2 border border-success rounded-pill'>%s</div>",$menu);
+            $html .= sprintf("<div class='mx-1 px-2 text-center'>%s</div>",$menu);
         }
         $html .= sprintf("</div>");
         $html .= sprintf("<div class=''>");
