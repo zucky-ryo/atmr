@@ -1,5 +1,3 @@
-const lazyload = require("./lazyload");
-
 $(function() {
 	$.ajaxSetup({ cache: false });
     show_page(0,1);
