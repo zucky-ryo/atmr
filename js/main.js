@@ -1,5 +1,6 @@
 $(function() {
 	$.ajaxSetup({ cache: false });
+    $('img.lazy').lazyload();
     show_page(0,1);
 });
 
@@ -15,7 +16,6 @@ function show_page(type=0,s_type=""){
         dataType : 'json',
         success : function(data){
             $('#main_div').html(data['html']);
-            $('img.lazy').lazyload();
         },
         error : function(err){
             
