@@ -11,6 +11,7 @@
         
         $html = "";
         $html .= sprintf("<div class='d-flex scroll_x mb-2'>");
+        $html .= sprintf("<button type='button' class='mx-1 px-2 btn btn-outline-success text-center' onclick='show_page(%d,``)'>全て</button>",$type);
         foreach($$menu_str as $key => $menu){
             $html .= sprintf("<button type='button' class='mx-1 px-2 btn btn-outline-success text-center' onclick='show_page(%d,%d)'>%s</button>",$type,$key,$menu);
         }
