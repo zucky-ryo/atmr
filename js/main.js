@@ -15,7 +15,6 @@ function show_page(type=0,s_type=""){
         dataType : 'json',
         success : function(data){
             $('#main_div').html(data['html']);
-            lazyload();
         },
         error : function(err){
             
