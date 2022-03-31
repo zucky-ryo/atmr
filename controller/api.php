@@ -27,7 +27,7 @@
         $html .= sprintf("<div class='col-12'>");
         $html .= sprintf("<div class='row bg-light'>");
         foreach($items as $i => $item){
-            if($i % 6 == 0 || $i % 6 == 5){
+            if($i % 7 == 0 || $i % 7 == 6){
                 $html .= sprintf("<div class='col-1'></div>");
             }else{
                 $html .= sprintf("<div class='col-xl-1 col-2 border border-white px-1'>");
