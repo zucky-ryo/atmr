@@ -1,6 +1,6 @@
 $(function() {
 	$.ajaxSetup({ cache: false });
-    show_page(0,1);
+    show_page(0,"");
 });
 
 function show_page(type=0,s_type=""){
@@ -17,6 +17,8 @@ function show_page(type=0,s_type=""){
         success : function(data){
             $.unblockUI();
             $('#main_div').html(data['html']);
+            $('#page_title').text(data['title']);
+            $('#page_sub_title').text(data['sub_title']);
             $("img.lazyload").lazyload();
         },
         error : function(err){
