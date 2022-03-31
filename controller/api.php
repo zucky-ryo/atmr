@@ -1,6 +1,6 @@
 <?php
 echo "aaa";
-    // require_once './items.php';
+    require_once './items.php';
 
     // $deb = "デバッグ";
     // if($_GET['sw'] == "show_page"){
