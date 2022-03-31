@@ -12,8 +12,8 @@
         $html .= sprintf("<div class='row'>");
         foreach($items as $item){
             $html .= sprintf("<div class='col-2'>");
-            $html .= sprintf("<div>%s</div>",$item['name']);
-            $html .= sprintf("<div><img src='%s'></div>",$item['img']);
+            $html .= sprintf("<div style='font-size: 8px;'>%s</div>",$item['name']);
+            $html .= sprintf("<div><img src='%s' width='100%%'></div>",$item['img']);
             $html .= sprintf("<div>%s</div>",$item['color']);
             $html .= sprintf("</div>");
         }
