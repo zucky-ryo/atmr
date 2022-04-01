@@ -27,7 +27,7 @@
         foreach($$menu_str as $key => $menu){
             $btn = "btn-outline-success";
             if($s_type == $key){ $btn = "btn-success"; $s_title = $$menu_str[$key]; }
-            $html .= sprintf("<button type='button' class='mx-1 px-2 btn %s text-center' onclick='show_page(%d,%d)'>%s</button>",$btn,$type,$key,$menu);
+            $html .= sprintf("<button type='button' class='mx-1 py-1 px-2 btn %s text-center' onclick='show_page(%d,%d)'>%s</button>",$btn,$type,$key,$menu);
         }
         $html .= sprintf("</div>");
         $html .= sprintf("<div class='d-flex scroll_x mb-2 px-2'>");
