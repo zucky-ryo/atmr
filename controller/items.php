@@ -3,50 +3,48 @@
 
     function getItem($type,$s_type){
         $item = new Item;
-        $items = $item->getAllData();
         if($type == "0"){
             if($s_type == ""){
-                $arr = $item->getFurniture($items);
+                $arr = $item->getFurniture();
             }elseif($s_type == "0"){
-                $arr = $item->getFurnitureA($items);
+                $arr = $item->getFurnitureA();
             }elseif($s_type == "1"){
-                $arr = $item->getFurnitureB($items);
+                $arr = $item->getFurnitureB();
             }elseif($s_type == "2"){
-                $arr = $item->getFurnitureC($items);
+                $arr = $item->getFurnitureC();
             }elseif($s_type == "3"){
-                $arr = $item->getFurnitureD($items);
+                $arr = $item->getFurnitureD();
             }elseif($s_type == "4"){
-                $arr = $item->getFurnitureE($items);
+                $arr = $item->getFurnitureE();
             }elseif($s_type == "5"){
-                $arr = $item->getFurnitureF($items);
+                $arr = $item->getFurnitureF();
             }
         }elseif($type == "1"){
             if($s_type == ""){
-                $arr = $item->getFashion($items);
+                $arr = $item->getFashion();
             }elseif($s_type == "0"){
-                $arr = $item->getFashionA($items);
+                $arr = $item->getFashionA();
             }elseif($s_type == "1"){
-                $arr = $item->getFashionB($items);
+                $arr = $item->getFashionB();
             }elseif($s_type == "2"){
-                $arr = $item->getFashionC($items);
+                $arr = $item->getFashionC();
             }elseif($s_type == "3"){
-                $arr = $item->getFashionD($items);
+                $arr = $item->getFashionD();
             }elseif($s_type == "4"){
-                $arr = $item->getFashionE($items);
+                $arr = $item->getFashionE();
             }elseif($s_type == "5"){
-                $arr = $item->getFashionF($items);
+                $arr = $item->getFashionF();
             }elseif($s_type == "6"){
-                $arr = $item->getFashionG($items);
+                $arr = $item->getFashionG();
             }elseif($s_type == "7"){
-                $arr = $item->getFashionH($items);
+                $arr = $item->getFashionH();
             }elseif($s_type == "8"){
-                $arr = $item->getFashionI($items);
+                $arr = $item->getFashionI();
             }elseif($s_type == "9"){
-                $arr = $item->getFashionJ($items);
+                $arr = $item->getFashionJ();
             }
         }
         return $arr;
-        return [];
     }
 
 

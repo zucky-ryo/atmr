@@ -12,6 +12,7 @@
         public function __construct(){
             $this->getConnect();
             $this->table = "items";
+            $this->order = "name ASC, color ASC";
         }
 
         public function getItem($id):void{
@@ -26,166 +27,76 @@
             $this->color  = $data['color'];
         }
 
-        public function getFurniture($arr){
-            foreach($arr as $val){
-                if($val['type'] == 0){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFurniture(){
+            return $this->getAllData("type=0");
         }
         
-        public function getFurnitureA($arr){
-            foreach($arr as $val){
-                if($val['type'] == 0 && $val['sub_type'] == 0){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFurnitureA(){
+            return $this->getAllData("type=0 and sub_type=0");
         }
 
-        public function getFurnitureB($arr){
-            foreach($arr as $val){
-                if($val['type'] == 0 && $val['sub_type'] == 1){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFurnitureB(){
+            return $this->getAllData("type=0 and sub_type=1");
         }
 
-        public function getFurnitureC($arr){
-            foreach($arr as $val){
-                if($val['type'] == 0 && $val['sub_type'] == 2){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFurnitureC(){
+            return $this->getAllData("type=0 and sub_type=2");
         }
 
-        public function getFurnitureD($arr){
-            foreach($arr as $val){
-                if($val['type'] == 0 && $val['sub_type'] == 3){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFurnitureD(){
+            return $this->getAllData("type=0 and sub_type=3");
         }
 
-        public function getFurnitureE($arr){
-            foreach($arr as $val){
-                if($val['type'] == 0 && $val['sub_type'] == 4){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFurnitureE(){
+            return $this->getAllData("type=0 and sub_type=4");
         }
 
-        public function getFurnitureF($arr){
-            foreach($arr as $val){
-                if($val['type'] == 0 && $val['sub_type'] == 5){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFurnitureF(){
+            return $this->getAllData("type=0 and sub_type=5");
         }
 
-        public function getFashion($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashion(){
+            return $this->getAllData("type=1");
         }
     
-        public function getFashionA($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 0){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionA(){
+            return $this->getAllData("type=1 and sub_type=0");
         }
     
-        public function getFashionB($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 1){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionB(){
+            return $this->getAllData("type=1 and sub_type=1");
         }
     
-        public function getFashionC($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 2){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionC(){
+            return $this->getAllData("type=1 and sub_type=2");
         }
     
-        public function getFashionD($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 3){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionD(){
+            return $this->getAllData("type=1 and sub_type=3");
         }
     
-        public function getFashionE($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 4){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionE(){
+            return $this->getAllData("type=1 and sub_type=4");
         }
     
-        public function getFashionF($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 5){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionF(){
+            return $this->getAllData("type=1 and sub_type=5");
         }
     
-        public function getFashionG($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 6){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionG(){
+            return $this->getAllData("type=1 and sub_type=6");
         }
     
-        public function getFashionH($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 7){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionH(){
+            return $this->getAllData("type=1 and sub_type=7");
         }
     
-        public function getFashionI($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 8){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionI(){
+            return $this->getAllData("type=1 and sub_type=8");
         }
     
-        public function getFashionJ($arr){
-            foreach($arr as $val){
-                if($val['type'] == 1 && $val['sub_type'] == 9){
-                    $datas[] = $val;
-                }
-            }
-            return $datas;
+        public function getFashionJ(){
+            return $this->getAllData("type=1 and sub_type=9");
         }
     }
 

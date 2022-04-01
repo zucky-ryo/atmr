@@ -1,8 +1,16 @@
 <?php
+    require_once __DIR__.'/../controller/users.php';
     require_once __DIR__.'/../controller/items.php';
     require_once __DIR__.'/../lib/master.php';
 
+    session_start();
+
     $deb = "デバッグ";
+
+    if($_GET['sw'] == "ck_session"){
+        $json = ck_session();
+    }
+
     if($_GET['sw'] == "show_page"){
         $type = $_GET['type'];
         $title = $type_arr[$type];
@@ -39,6 +47,8 @@
         $html .= sprintf("</div>");
 
         $json = ['html' => $html, 'title' => $title, 'sub_title' => $s_title];
+        $_SESSION['type'] = $_GET['type'];
+        $_SESSION['s_type'] = $_GET['s_type'];
     }
 
     $json['deb'] = $deb;

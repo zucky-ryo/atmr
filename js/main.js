@@ -1,9 +1,29 @@
 $(function() {
 	$.ajaxSetup({ cache: false });
-    show_page(0,"");
+    ck_session();
 });
 
-function show_page(type=0,s_type=""){
+
+function ck_session(){
+    $.blockUI({message:'読み込み中',baseZ: 9999});
+    $.ajax({
+        type : "get",
+        url  : "./controller/api.php",
+        data : {
+            'sw'     : "ck_session"
+        },
+        dataType : 'json',
+        success : function(data){
+            $.unblockUI();
+            show_page(data['type'],data['s_type']);
+        },
+        error : function(err){
+            $.unblockUI();
+        }
+    });
+}
+
+function show_page(type,s_type){
     $.blockUI({message:'読み込み中',baseZ: 9999});
     $.ajax({
         type : "get",
