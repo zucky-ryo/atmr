@@ -30,10 +30,10 @@
             $html .= sprintf("<button type='button' class='mx-1 px-2 btn %s text-center' onclick='show_page(%d,%d)'>%s</button>",$btn,$type,$key,$menu);
         }
         $html .= sprintf("</div>");
-        $html .= sprintf("<div class='d-flex justify-content-center align-items-center'>");
+        $html .= sprintf("<div class='d-flex justify-content-center align-items-center scroll_x'>");
         $arr = ["A","あ","か","さ","た","な","は","ま","や","ら","わ"];
         for($i=0;$i<11;$i++){
-            $html .= sprintf("<button type='button' class='mx-1 px-2 btn btn-sm btn-outline-dark text-center'>%s</button>",$arr[$i]);
+            $html .= sprintf("<button type='button' class='mx-1 px-2 btn btn btn-outline-dark text-center'>%s</button>",$arr[$i]);
         }
         $html .= sprintf("</div>");
         $html .= sprintf("<div class='px-1'>");
