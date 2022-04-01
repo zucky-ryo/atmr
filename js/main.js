@@ -47,6 +47,42 @@ function show_page(type,s_type){
     });
 }
 
+function main_scroll(sw){
+    if(sw == 0 && typeof $('#scroll').position() !== "undefined"){
+        $(window).scrollTop($('#scroll').position().top);
+    }
+    if(sw == 1 && typeof $('#scroll_a').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_a').position().top);
+    }
+    if(sw == 2 && typeof $('#scroll_k').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_k').position().top);
+    }
+    if(sw == 3 && typeof $('#scroll_s').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_s').position().top);
+    }
+    if(sw == 4 && typeof $('#scroll_t').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_t').position().top);
+    }
+    if(sw == 5 && typeof $('#scroll_n').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_n').position().top);
+    }
+    if(sw == 6 && typeof $('#scroll_h').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_h').position().top);
+    }
+    if(sw == 7 && typeof $('#scroll_m').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_m').position().top);
+    }
+    if(sw == 8 && typeof $('#scroll_y').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_y').position().top);
+    }
+    if(sw == 9 && typeof $('#scroll_r').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_r').position().top);
+    }
+    if(sw == 10 && typeof $('#scroll_w').position() !== "undefined"){
+        $(window).scrollTop($('#scroll_w').position().top);
+    }
+}
+
 function copy_wrap(){
     let item_arr = [];
     let arr = $('.items').children;
