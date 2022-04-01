@@ -16,7 +16,7 @@
         $title = $type_arr[$type];
         $s_type = $_GET['s_type'];
         $s_title = "全て";
-        $items = getItem($type,$s_type);
+        // $items = getItem($type,$s_type);
         $menu_str = "type_".$type."_arr";
         $btn = "btn-outline-success";
         if($s_type == ""){ $btn = "btn-success"; }
