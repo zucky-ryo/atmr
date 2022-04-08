@@ -2,7 +2,12 @@
     // mb_language("ja");
     // mb_internal_encoding("UTF-8");
 
-    
+    $conn = MySQLi_connect("localhost","atmr_user","tqVgK4RY.i/Cjr-T","animal_comp");
+	MySQLi_Set_Charset($conn,"utf8");
+
+    $str = sprintf("select * from items where id=11993");
+    $res = mysqli_query($conn,$str);
+    $item = mysqli_fetch_assoc($res);
 
     $mokuji = [
         "あ","い","う","え","お","ア","イ","ウ","エ","オ",
@@ -29,7 +34,7 @@
         "w","w","w","w","w","w"
     ];
 
-    $item['name'] = "あおいバラのリース";
+    // $item['name'] = "あおいバラのリース";
     // var_dump(array_search(mb_substr($item['name'],0,1),$mokuji) === false);
     if(array_search(mb_substr($item['name'],0,1),$mokuji) === false){
         echo "最初";
