@@ -52,7 +52,7 @@ function main_scroll(sw){
         $(window).scrollTop($('#scroll').position().top);
     }
     if(sw == 1 && typeof $('#scroll_a').position() !== "undefined"){
-        $(window).scrollTop($('#scroll_a').position().top - 100);
+        $(window).scrollTop($('#scroll_a').position().top - 130);
     }
     if(sw == 2 && typeof $('#scroll_k').position() !== "undefined"){
         $(window).scrollTop($('#scroll_k').position().top);
