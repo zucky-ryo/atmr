@@ -40,6 +40,9 @@ function show_page(type,s_type){
             $('#page_title').text(data['title']);
             $('#page_sub_title').text(data['sub_title']);
             $("img.lazyload").lazyload();
+            if($('#main_menu').is(':visible')) {
+                $('#main_menu').collapse('hide');
+            }
         },
         error : function(err){
             $.unblockUI();
