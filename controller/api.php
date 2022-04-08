@@ -38,7 +38,7 @@
         }
         $html .= sprintf("</div>");
         $html .= sprintf("</div>");
-        $html .= sprintf("<div class='px-1'>");
+        $html .= sprintf("<div class='mt-3 px-1'>");
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class='d-flex flex-wrap bg-light'>");
