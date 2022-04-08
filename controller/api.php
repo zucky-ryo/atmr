@@ -75,6 +75,7 @@
                         $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;'>");
                     }
                 }else{
+                    $deb = "徹";
                     $key = array_search(mb_substr($item['name'],0,1),$mokuji);
                     if(!isset($moku[$mokuji_a[$key]])){
                         $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;' id='scroll_%s'>",$mokuji_a[$key]);
