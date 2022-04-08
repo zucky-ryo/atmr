@@ -12,7 +12,7 @@
         $json = ck_session();
     }
 
-    if($_GET['sw'] == "login"){
+    if($_POST['sw'] == "login"){
         $json = login($_POST['name'],$_POST['pass']);
     }
 
