@@ -96,7 +96,7 @@
         $html .= sprintf("</div>");
         $html .= sprintf("</div>");
 
-        $json = ['html' => $html, 'title' => $title, 'sub_title' => $s_title];
+        $json = ['deb' => $deb, 'html' => $html, 'title' => $title, 'sub_title' => $s_title];
         $_SESSION['type'] = $_GET['type'];
         $_SESSION['s_type'] = $_GET['s_type'];
     }
