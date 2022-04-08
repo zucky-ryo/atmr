@@ -71,19 +71,19 @@
             if($before != $item['img']){
                 if(array_search(mb_substr(trim($item['name']),0,1),$mokuji) === false){
                     if(!isset($moku['top'])){
-                        $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;' id='scroll'>");
+                        $html .= sprintf("<div class='border border-white px-1' style='width: 20%%; min-height: 123px;' id='scroll'>");
                         $moku['top'] = true;
                     }else{
-                        $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;'>");
+                        $html .= sprintf("<div class='border border-white px-1' style='width: 20%%; min-height: 123px;'>");
                     }
                 }else{
                     $deb = "徹";
                     $key = array_search(mb_substr(trim($item['name']),0,1),$mokuji);
                     if(!isset($moku[$mokuji_a[$key]])){
-                        $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;' id='scroll_%s'>",$mokuji_a[$key]);
+                        $html .= sprintf("<div class='border border-white px-1' style='width: 20%%; min-height: 123px;' id='scroll_%s'>",$mokuji_a[$key]);
                         $moku[$mokuji_a[$key]] = true;
                     }else{
-                        $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;'>");
+                        $html .= sprintf("<div class='border border-white px-1' style='width: 20%%; min-height: 123px;'>");
                     }
                 }
                 $html .= sprintf("<div class='py-1' style='font-size: 10px; font-weight: bold;'>%s</div>",$item['name']);
