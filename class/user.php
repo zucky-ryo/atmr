@@ -16,12 +16,12 @@
         public function getUser($id,$sw=0):void{
             $now = date('Y-m-d H:i:s');
             if($sw == 0){
-                $upd_str = sprintf("update %s set update_at='%s' where id='%d';",$this->table,$now,$id);
+                $upd_str = sprintf("update users set update_at='%s' where id='%d';",$now,$id);
             }elseif($sw == 1){
-                $upd_str = sprintf("update %s set pass=concat(pass,'%d'),update_at='%s' where id='%d';",$this->table,$id,$now,$id);
+                $upd_str = sprintf("update users set pass=concat(pass,'%d'),update_at='%s' where id='%d';",$id,$now,$id);
             }
             mysqli_query($this->conn,$upd_str);
-            $sql = sprintf("select * from %s where id='%d';",$this->table,$id);
+            $sql = sprintf("select * from users where id='%d';",$id);
             $res = mysqli_query($this->conn,$sql);
             $data = mysqli_fetch_assoc($res);
             $this->id   = $data['id'];
@@ -38,6 +38,20 @@
             mysqli_query($this->conn,$ins_str);
             $id = mysqli_insert_id($this->conn);
             $this->getUser($id,1);
+        }
+
+        public function login($id,$name,$pass):void{
+            $sql = sprintf("select * from users where name='%s' and pass='%s';",$name,$pass);
+            $res = mysqli_query($this->conn,$sql);
+            $row = mysqli_num_rows($res);
+            if($row != 0){
+                $sql = sprintf("update users set name='%s',pass='%s' where id='%d';",$name,$pass,$id);
+                $res = mysqli_query($this->conn,$sql);
+                $this->getUser($id,0);
+            }else{
+                $user = mysqli_fetch_assoc($res);
+                $this->getUser($user['id'],0);
+            }
         }
     }
 

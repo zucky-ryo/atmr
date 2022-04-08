@@ -23,6 +23,33 @@ function ck_session(){
     });
 }
 
+function login_modal(){
+    $('#login_modal').modal('show');
+}
+
+function login(){
+    const name = $('#user_name').val();
+    const pass = $('#user_pass').val();
+    $.blockUI({message:'読み込み中',baseZ: 9999});
+    $.ajax({
+        type : "post",
+        url  : "./controller/api.php",
+        data : {
+            'sw'   : "login",
+            'name' : name,
+            'pass' : pass
+        },
+        dataType : 'json',
+        success : function(data){
+            $.unblockUI();
+            show_page(data['type'],data['s_type']);
+        },
+        error : function(err){
+            $.unblockUI();
+        }
+    });
+}
+
 function show_page(type,s_type){
     $.blockUI({message:'読み込み中',baseZ: 9999});
     $.ajax({

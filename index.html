@@ -20,7 +20,7 @@
 		<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light" id='main_nav'>
 			<a class="navbar-brand text-dark" href="#">所持率チェッカー</a>
 			<div class="d-flex justify-content-between align-items-center">
-				<div class="mr-3 pointer"><img src="./data/icon/user.png" width="30px" height="30px"></div>
+				<div class="mr-3 pointer" onclick="login_modal()"><img src="./data/icon/user.png" width="30px" height="30px"></div>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -51,16 +51,25 @@
 
 
 	<!-- モーダルダイアログ -->
-	<div id='modal' class='modal fade'>
+	<div id='login_modal' class='modal fade'>
 		<div class='modal-dialog modal-xl'>
 			<div class='modal-content'>
 				<div class='modal-header' id='modal_header'>
-					<h5 id="modal_title" class="modal-title">Modal title</h5>
+					<h5 id="modal_title" class="modal-title">ログイン</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class='modal-body' id='modal_body'></div>
+				<div class='modal-body' id='modal_body'>
+					<div class="d-flex">
+						<div>ユーザー名</div>
+						<div><input type="text" id="user_name"></div>
+					</div>
+					<div class="d-flex">
+						<div>パスワード</div>
+						<div><input type="text" id="user_pass"></div>
+					</div>
+				</div>
 				<div class='modal-footer' id='modal_foot'>
 					<button type='button' class='btn btn-default btn-outline-dark' data-dismiss='modal'>閉じる</button>
 				</div>

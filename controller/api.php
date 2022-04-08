@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+
     require_once __DIR__.'/../controller/users.php';
     require_once __DIR__.'/../controller/items.php';
     require_once __DIR__.'/../lib/master.php';
@@ -10,6 +10,10 @@
 
     if($_GET['sw'] == "ck_session"){
         $json = ck_session();
+    }
+
+    if($_GET['sw'] == "login"){
+        $json = login($_POST['name'],$_POST['pass']);
     }
 
     if($_GET['sw'] == "show_page"){
