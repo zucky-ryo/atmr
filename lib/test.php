@@ -1,6 +1,6 @@
 <?php
-    mb_language("ja");
-    mb_internal_encoding("UTF-8");
+    // mb_language("ja");
+    // mb_internal_encoding("UTF-8");
 
     
 
