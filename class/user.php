@@ -44,7 +44,7 @@
             $sql = sprintf("select * from users where name='%s' and pass='%s';",$name,$pass);
             $res = mysqli_query($this->conn,$sql);
             $row = mysqli_num_rows($res);
-            if($row != 0){
+            if($row == 0){
                 $sql = sprintf("update users set name='%s',pass='%s' where id='%d';",$name,$pass,$id);
                 $res = mysqli_query($this->conn,$sql);
                 $this->getUser($id,0);
