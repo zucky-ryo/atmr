@@ -35,13 +35,13 @@
     ];
 
     // $item['name'] = "あおいバラのリース";
-    // var_dump(array_search(mb_substr($item['name'],0,1),$mokuji) === false);
-    if(array_search(mb_substr($item['name'],0,1),$mokuji) === false){
-        echo "最初";
-    }else{
-        $key = array_search(mb_substr($item['name'],0,1),$mokuji);
-        if(!isset($moku[$mokuji_a[$key]])){
-            echo "次";
-        }
-    }
+    var_dump(array_search(mb_substr($item['name'],0,1),$mokuji));
+    // if(array_search(mb_substr($item['name'],0,1),$mokuji) === false){
+    //     echo "最初";
+    // }else{
+    //     $key = array_search(mb_substr($item['name'],0,1),$mokuji);
+    //     if(!isset($moku[$mokuji_a[$key]])){
+    //         echo "次";
+    //     }
+    // }
 ?>
