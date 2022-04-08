@@ -1,9 +1,10 @@
 <?php
+    session_start();
+    
     require_once __DIR__.'/../controller/users.php';
     require_once __DIR__.'/../controller/items.php';
     require_once __DIR__.'/../lib/master.php';
 
-    session_start();
 
     $deb = "デバッグ";
 
