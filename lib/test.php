@@ -35,7 +35,8 @@
     ];
 
     // $item['name'] = "あおいバラのリース";
-    var_dump(mb_substr($item['name'],0,1));
+    var_dump($item['name']);
+    // var_dump(mb_substr($item['name'],0,1));
     // var_dump(array_search(mb_substr($item['name'],0,1),$mokuji));
     // if(array_search(mb_substr($item['name'],0,1),$mokuji) === false){
     //     echo "最初";
