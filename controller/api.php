@@ -67,7 +67,7 @@
         ];
         foreach($items as $i => $item){
             if($before != $item['img']){
-                if(array_search(mb_substr($item['name'],0,1),$mokuji) === false){
+                if(array_search(mb_substr(trim($item['name']),0,1),$mokuji) === false){
                     if(!isset($moku['top'])){
                         $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;' id='scroll'>");
                         $moku['top'] = true;
@@ -76,7 +76,7 @@
                     }
                 }else{
                     $deb = "徹";
-                    $key = array_search(mb_substr($item['name'],0,1),$mokuji);
+                    $key = array_search(mb_substr(trim($item['name']),0,1),$mokuji);
                     if(!isset($moku[$mokuji_a[$key]])){
                         $html .= sprintf("<div class='border border-white px-1' style='width: 20%%;' id='scroll_%s'>",$mokuji_a[$key]);
                         $moku[$mokuji_a[$key]] = true;
