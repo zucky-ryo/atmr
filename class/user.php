@@ -35,12 +35,13 @@
             $res = mysqli_query($this->conn,$sql);
             $row = mysqli_num_rows($res);
             if($row == 0){
-                $sql = sprintf("update users set name='%s',pass='%s' where id='%d';",$name,$pass,$id);
+                $sql = sprintf("insert into users (name,pass,update_at) values ('%s','%s','%s');",$name,$pass,date('Y-m-d H:i:s'));
                 $res = mysqli_query($this->conn,$sql);
-                $this->getUser($id,0);
+                $new_id = mysqli_insert_id($this->conn);
+                $sql = sprintf("update user_item_relations set user_id='%d' where guest_id='%s';",$new_id,$id);
+                $res = mysqli_query($this->conn,$sql);
+                $this->getUser($new_id,0);
             }else{
-                $sql = sprintf("delete from users where id='%d';",$id);
-                $res = mysqli_query($this->conn,$sql);
                 $user = mysqli_fetch_assoc($res);
                 $this->getUser($user['id'],0);
             }
