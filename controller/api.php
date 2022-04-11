@@ -15,10 +15,16 @@
         }else{
             $json = ['type' => $_SESSION['type'], 's_type' => $_SESSION['s_type']];
         }
+        if(isset($_SESSION['login'])){
+            $json['login'] = true;
+        }else{
+            $json['login'] = false;
+        }
     }
 
     if($_POST['sw'] == "login"){
-        $json = login($_POST['name'],$_POST['pass']);
+        $id = login($_POST['name'],$_POST['pass']);
+        $json = ['type' => $_SESSION['type'], 's_type' => $_SESSION['s_type']];
     }
 
     if($_GET['sw'] == "show_page"){
