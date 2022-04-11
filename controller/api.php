@@ -88,7 +88,7 @@
             if($before != $item['img']){
                 if(array_search(mb_substr(trim($item['name']),0,1),$mokuji) === false){
                     if(!isset($moku['top'])){
-                        $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px;' id='scroll' onclick='check_item(this,`%s`,`%d)'>",$_SESSION['user_id'],$item['id']);
+                        $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px;' id='scroll' onclick='check_item(this,`%s`,%d)'>",$_SESSION['user_id'],$item['id']);
                         $moku['top'] = true;
                     }else{
                         $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px;' onclick='check_item(this,`%s`,%d)'>",$_SESSION['user_id'],$item['id']);
