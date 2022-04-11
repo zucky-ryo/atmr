@@ -117,6 +117,34 @@ function main_scroll(sw){
     }
 }
 
+function check_item(user_id,item_id){
+    $.blockUI({message:'読み込み中',baseZ: 9999});
+    $.ajax({
+        type : "post",
+        url  : "./controller/api.php",
+        data : {
+            'sw'      : "check_item",
+            'user_id' : user_id,
+            'item_id' : item_id
+        },
+        dataType : 'json',
+        success : function(data){
+            $.unblockUI();
+            $('#main_div').html(data['html']);
+            $('#page_title').text(data['title']);
+            $('#page_sub_title').text(data['sub_title']);
+            $("img.lazyload").lazyload();
+            if($('#main_menu').is(':visible')) {
+                $('#main_menu').collapse('hide');
+            }
+        },
+        error : function(err){
+            $.unblockUI();
+        }
+    });
+}
+
+// ガチコンプからデータ取ってくるコード
 function copy_wrap(){
     let item_arr = [];
     let arr = $('.items').children;
