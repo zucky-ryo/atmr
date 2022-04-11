@@ -1,3 +1,3 @@
 <?php
-    echo date('gHisYmd');
+    echo 'g'.date('HisYmd');
 ?>
