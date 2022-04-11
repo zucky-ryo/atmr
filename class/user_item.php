@@ -13,7 +13,7 @@
         }
 
         public function checkItem($user_id,$item_id){
-            $sql = sprintf("select * from user_item_relations where item_id='%d' and (user_id='%s' or guest_id='%s');",$item_id,$user_id,$user_id);
+            $sql = sprintf("select * from user_item_relations where item_id='%d' and (user_id='%d' or guest_id='%s');",$item_id,$user_id,$user_id);
             $res = mysqli_query($this->conn,$sql);
             $row = mysqli_num_rows($res);
             if($row == 0){
@@ -27,7 +27,7 @@
                 $res =  mysqli_query($this->conn,$sql);
             }else{
                 $result = 1;
-                $sql = sprintf("delete from user_item_relations where item_id='%d' and (user_id='%s' or guest_id='%s');",$item_id,$user_id,$user_id);
+                $sql = sprintf("delete from user_item_relations where item_id='%d' and (user_id='%d' or guest_id='%s');",$item_id,$user_id,$user_id);
                 $res = mysqli_query($this->conn,$sql);
             }
             if(!$res){
