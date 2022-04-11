@@ -118,7 +118,6 @@ function main_scroll(sw){
 }
 
 function check_item($this,user_id,item_id){
-    debugger
     $.blockUI({message:'読み込み中',baseZ: 9999});
     $.ajax({
         type : "post",
@@ -132,9 +131,9 @@ function check_item($this,user_id,item_id){
         success : function(data){
             $.unblockUI();
             if(data['res'] == 0){
-
+                $this.style.backgroundColor = "#b2ffb2";
             }else if(data['res'] == 1){
-
+                $this.style.backgroundColor = '#f8f9fa';
             }
         },
         error : function(err){
