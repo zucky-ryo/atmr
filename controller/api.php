@@ -56,6 +56,8 @@
         $html .= sprintf("</div>");
         $html .= sprintf("</div>");
         $html .= sprintf("<div class='px-1' style='padding-top: 90px;'>");
+        $top_html = $html;
+        $html = "";
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class='d-flex flex-wrap bg-light'>");
@@ -84,10 +86,15 @@
             "r","r","r","r","r","r","r","r","r","r",
             "w","w","w","w","w","w"
         ];
+        $have = 0; $max = 0;
         foreach($items as $i => $item){
-            $bg = "#f8f9fa";
-            if(isset($item['sw'])){ $bg = "#b2ffb2"; }
             if($before != $item['img']){
+                $max++;
+                $bg = "#f8f9fa";
+                if(isset($item['sw'])){
+                    $have++;
+                    $bg = "#b2ffb2";
+                }
                 if(array_search(mb_substr(trim($item['name']),0,1),$mokuji) === false){
                     if(!isset($moku['top'])){
                         $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' id='scroll' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
@@ -116,6 +123,17 @@
         $html .= sprintf("</div>");
         $html .= sprintf("</div>");
         $html .= sprintf("</div>");
+
+        $rate = ($have*1.0) / ($max*1.0);
+        $mid_html = "";
+        $mid_html .= sprintf("<div class='d-flex justify-content-between align-items-center'>");
+        $mid_html .= sprintf("<div><span id='rate'>%s</span>%%</div>",$rate);
+        $mid_html .= sprintf("<div><span id='have'>%d</span>/<span id='max'>%d</span></div>",$have,$max);
+        $mid_html .= sprintf("<div>");
+        $mid_html .= sprintf("</div>");
+        $mid_html .= sprintf("</div>");
+
+        $html = $top_html.$mid_html.$html;
 
         $json = ['deb' => $deb, 'html' => $html, 'title' => $title, 'sub_title' => $s_title];
         $_SESSION['type'] = $_GET['type'];
