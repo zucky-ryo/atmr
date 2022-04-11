@@ -132,6 +132,7 @@ function check_item($this,user_id,item_id){
             $.unblockUI();
             if(data['res'] == 0){
                 $this.style.backgroundColor = "#b2ffb2";
+                $('#rate').text((Math.round((parseFloat($('#have').text()) / parseFloat($('#max').text())) * 10)) / 10);
                 $('#have').text(Number($('#have').text())+1);
             }else if(data['res'] == 1){
                 $this.style.backgroundColor = '#f8f9fa';
