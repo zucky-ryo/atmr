@@ -39,8 +39,8 @@
         if($s_type == ""){ $btn = "btn-success"; }
         
         $html = "";
-        // $html .= sprintf("<div class='bg-white py-1'>");
-        $html .= sprintf("<div class='bg-white py-1' style='position: sticky;'>");
+        $html .= sprintf("<div class='bg-white py-1'>");
+        // $html .= sprintf("<div class='bg-white py-1' style='position: sticky;'>");
         $html .= sprintf("<div class='d-flex scroll_x mb-2 px-2'>");
         $html .= sprintf("<button type='button' class='mx-1 px-2 btn %s text-center' onclick='show_page(%d,``)'>全て</button>",$btn,$type);
         foreach($$menu_str as $key => $menu){
@@ -56,8 +56,8 @@
         }
         $html .= sprintf("</div>");
         $html .= sprintf("</div>");
-        // $html .= sprintf("<div class='px-1'>");
-        $html .= sprintf("<div class='px-1' style='padding-top: 90px;'>");
+        $html .= sprintf("<div class='px-1'>");
+        // $html .= sprintf("<div class='px-1' style='padding-top: 90px;'>");
         $top_html = $html;
         $html = "";
         $html .= sprintf("<div class=''>");
