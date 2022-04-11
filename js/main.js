@@ -15,7 +15,7 @@ function ck_session(){
         dataType : 'json',
         success : function(data){
             $.unblockUI();
-            if(!data['login']){
+            if(data['login']){
                 $('#login_button').hide();
             }
             show_page(data['type'],data['s_type']);
