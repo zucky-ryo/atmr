@@ -11,6 +11,9 @@
     if($_GET['sw'] == "ck_session"){
         if(!isset($_SESSION['user_id'])){
             $_SESSION['user_id'] = 'g'.date('HisYmd');
+            $json = ['type' => 0, 's_type' => 0];
+        }else{
+            $json = ['type' => $_SESSION['type'], 's_type' => $_SESSION['s_type']];
         }
     }
 
