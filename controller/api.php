@@ -127,10 +127,8 @@
         $rate = ($have*1.0) / ($max*1.0);
         $mid_html = "";
         $mid_html .= sprintf("<div class='d-flex justify-content-between align-items-center'>");
-        $mid_html .= sprintf("<div><span id='rate'>%.1fn</span>%%</div>",$rate);
+        $mid_html .= sprintf("<div><span id='rate'>%.1f</span>%%</div>",$rate);
         $mid_html .= sprintf("<div><span id='have'>%d</span>/<span id='max'>%d</span></div>",$have,$max);
-        $mid_html .= sprintf("<div>");
-        $mid_html .= sprintf("</div>");
         $mid_html .= sprintf("</div>");
 
         $html = $top_html.$mid_html.$html;
