@@ -117,7 +117,8 @@ function main_scroll(sw){
     }
 }
 
-function check_item(user_id,item_id){
+function check_item($this,user_id,item_id){
+    debugger
     $.blockUI({message:'読み込み中',baseZ: 9999});
     $.ajax({
         type : "post",
@@ -130,12 +131,10 @@ function check_item(user_id,item_id){
         dataType : 'json',
         success : function(data){
             $.unblockUI();
-            $('#main_div').html(data['html']);
-            $('#page_title').text(data['title']);
-            $('#page_sub_title').text(data['sub_title']);
-            $("img.lazyload").lazyload();
-            if($('#main_menu').is(':visible')) {
-                $('#main_menu').collapse('hide');
+            if(data['res'] == 0){
+
+            }else if(data['res'] == 1){
+
             }
         },
         error : function(err){
