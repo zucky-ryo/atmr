@@ -86,7 +86,7 @@
         ];
         foreach($items as $i => $item){
             $bg = "#f8f9fa";
-            if(isset($item['item_id'])){ $bg = "#b2ffb2"; }
+            if(isset($item['sw'])){ $bg = "#b2ffb2"; }
             if($before != $item['img']){
                 if(array_search(mb_substr(trim($item['name']),0,1),$mokuji) === false){
                     if(!isset($moku['top'])){

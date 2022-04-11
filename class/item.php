@@ -30,7 +30,7 @@
         public function getItems($user_id,$type,$s_type){
             if($s_type != ""){ $s_type = sprintf("and sub_type='%d'",$s_type); }
             $sql  = sprintf("select A.*,B.item_id as sw from items as A left join user_item_relations as B ");
-            $sql .= sprintf("on A.id = B.item_id and (B.user_id = '%s' or B.guest_id = '%s') ",$user_id,$user_id);
+            $sql .= sprintf("on A.id = B.item_id and (B.user_id = '%d' or B.guest_id = '%s') ",$user_id,$user_id);
             $sql .= sprintf("where type='%d' %s;",$type,$s_type);
             $res = mysqli_query($this->conn,$sql);
             while($row = mysqli_fetch_assoc($res)){
@@ -38,7 +38,7 @@
             }
             return $items;
         }
-        
+
     }
 
 
