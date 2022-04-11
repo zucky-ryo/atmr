@@ -30,16 +30,6 @@
             $this->upd  = $data['update_at'];
         }
 
-        public function insertGuest():void{
-            $now = date('Y-m-d H:i:s');
-            $name = "guest_".date('YmdHis');
-            $pass = date('YmdHis')."_";
-            $ins_str = sprintf("insert into users (name,pass,update_at) values ('%s','%s','%s')",$name,$pass,$now);
-            mysqli_query($this->conn,$ins_str);
-            $id = mysqli_insert_id($this->conn);
-            $this->getUser($id,1);
-        }
-
         public function login($id,$name,$pass):void{
             $sql = sprintf("select * from users where name='%s' and pass='%s';",$name,$pass);
             $res = mysqli_query($this->conn,$sql);

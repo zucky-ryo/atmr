@@ -10,8 +10,7 @@
 
     if($_GET['sw'] == "ck_session"){
         if(!isset($_SESSION['user_id'])){
-            $_SESSION['user_id'] = date('gHisYmd');
-            $json = ck_session();
+            $_SESSION['user_id'] = 'g'.date('HisYmd');
         }
     }
 
