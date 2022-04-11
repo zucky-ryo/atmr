@@ -49,6 +49,8 @@
                 $res = mysqli_query($this->conn,$sql);
                 $this->getUser($id,0);
             }else{
+                $sql = sprintf("delete from users where id='%d';",$id);
+                $res = mysqli_query($this->conn,$sql);
                 $user = mysqli_fetch_assoc($res);
                 $this->getUser($user['id'],0);
             }
