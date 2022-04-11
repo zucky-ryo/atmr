@@ -9,7 +9,10 @@
     $deb = "デバッグ";
 
     if($_GET['sw'] == "ck_session"){
-        $json = ck_session();
+        if(!isset($_SESSION['user_id'])){
+            $_SESSION['user_id'] = date('gHisYmd');
+            $json = ck_session();
+        }
     }
 
     if($_POST['sw'] == "login"){
