@@ -31,7 +31,7 @@
                 $res = mysqli_query($this->conn,$sql);
             }
             if(!$res){
-                $result = false;
+                $result = 2;
             }
             return $result;
         }

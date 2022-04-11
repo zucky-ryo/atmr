@@ -130,8 +130,7 @@ function check_item($this,user_id,item_id){
         dataType : 'json',
         success : function(data){
             $.unblockUI();
-            if(data['res'] == false){
-            }else if(data['res'] == 0){
+            if(data['res'] == 0){
                 $this.style.backgroundColor = "#b2ffb2";
             }else if(data['res'] == 1){
                 $this.style.backgroundColor = '#f8f9fa';
