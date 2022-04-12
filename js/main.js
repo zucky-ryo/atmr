@@ -67,7 +67,7 @@ function show_page(type,s_type){
         dataType : 'json',
         success : function(data){
             $.unblockUI();
-            // $('#main_menu').html(data['menu']);
+            $('#sub_menu').html(data['menu']);
             $('#main_div').html(data['html']);
             $('#page_title').text(data['title']);
             $('#page_sub_title').text(data['sub_title']);
