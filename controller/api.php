@@ -57,9 +57,9 @@
         $html .= sprintf("</div>");
         $html .= sprintf("</div>");
         $top_html = $html;
-        $top_main_html = sprintf("<div class='px-1'>");
         // $html .= sprintf("<div class='px-1' style='padding-top: 90px;'>");
         $html = "";
+        $html .= sprintf("<div class='px-1'>");
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class='d-flex flex-wrap bg-light'>");
@@ -133,7 +133,7 @@
         $mid_html .= sprintf("<div><span id='have'>%d</span>/<span id='max'>%d</span></div>",$have,$max);
         $mid_html .= sprintf("</div>");
 
-        $html = $top_main_html.$mid_html.$html;
+        $top_html .= $mid_html;
 
         $json = ['deb' => $deb, 'menu' => $top_html, 'html' => $html, 'title' => $title, 'sub_title' => $s_title];
         $_SESSION['type'] = $_GET['type'];
