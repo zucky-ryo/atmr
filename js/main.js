@@ -84,10 +84,10 @@ function show_page(type,s_type){
 
 function main_scroll(sw){
     if(sw == 0 && typeof $('#scroll').position() !== "undefined"){
-        $(window).scrollTop($('#scroll').position().top - 145);
+        $(window).scrollTop($('#scroll').position().top - 169);
     }
     if(sw == 1 && typeof $('#scroll_a').position() !== "undefined"){
-        $(window).scrollTop($('#scroll_a').position().top - 145);
+        $(window).scrollTop($('#scroll_a').position().top - 169);
     }
     if(sw == 2 && typeof $('#scroll_k').position() !== "undefined"){
         $(window).scrollTop($('#scroll_k').position().top - 145);
