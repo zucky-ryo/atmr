@@ -39,7 +39,7 @@
         if($s_type == ""){ $btn = "btn-success"; }
         
         $html = "";
-        $html .= sprintf("<div class='bg-white py-1'>");
+        $html .= sprintf("<div class='bg-white pt-1'>");
         // $html .= sprintf("<div class='bg-white py-1' style='position: sticky;'>");
         $html .= sprintf("<div class='d-flex scroll_x mb-2 px-2'>");
         $html .= sprintf("<button type='button' class='mx-1 px-2 btn %s text-center' onclick='show_page(%d,``)'>全て</button>",$btn,$type);
@@ -128,9 +128,11 @@
 
         $rate = 100.0 * ($have*1.0) / ($max*1.0);
         $mid_html = "";
+        $mid_html .= sprintf("<div class='px-1 pb-1'>");
         $mid_html .= sprintf("<div class='d-flex justify-content-between align-items-center'>");
         $mid_html .= sprintf("<div><span id='rate'>%.1f</span>%%</div>",$rate);
         $mid_html .= sprintf("<div><span id='have'>%d</span>/<span id='max'>%d</span></div>",$have,$max);
+        $mid_html .= sprintf("</div>");
         $mid_html .= sprintf("</div>");
 
         $top_html .= $mid_html;
