@@ -18,6 +18,7 @@
         }
         if(isset($_SESSION['login'])){
             $json['login'] = true;
+            $json['user'] = $_SESSION['user_name'];
         }else{
             $json['login'] = false;
         }
@@ -25,7 +26,7 @@
 
     if($_POST['sw'] == "login"){
         $id = login($_POST['name'],$_POST['pass']);
-        $json = ['type' => $_SESSION['type'], 's_type' => $_SESSION['s_type']];
+        $json = ['type' => $_SESSION['type'], 's_type' => $_SESSION['s_type'], 'user' => $_SESSION['user_name']];
     }
 
     if($_GET['sw'] == "show_page"){

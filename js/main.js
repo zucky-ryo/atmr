@@ -17,6 +17,8 @@ function ck_session(){
             $.unblockUI();
             if(data['login']){
                 $('#login_button').hide();
+                $('#my_user').show();
+                $('#my_user').text(data['user']);
             }
             show_page(data['type'],data['s_type']);
         },
@@ -47,6 +49,8 @@ function login(){
             $.unblockUI();
             $('#login_modal').modal('hide');
             $('#login_button').hide();
+            $('#my_user').show();
+            $('#my_user').text(data['user']);
             show_page(data['type'],data['s_type']);
         },
         error : function(err){
