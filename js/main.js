@@ -138,7 +138,7 @@ function check_item($this,user_id,item_id){
                 $this.style.backgroundColor = '#f8f9fa';
                 $('#have').text(Number($('#have').text())-1);
             }
-            $('#rate').text((Math.round((100.0 * parseFloat($('#have').text()) / parseFloat($('#max').text())) * 10.0)) / 10.0);
+            $('#rate').text(((Math.round((100.0 * parseFloat($('#have').text()) / parseFloat($('#max').text())) * 10.0)) / 10.0).toFixed(1));
         },
         error : function(err){
             $.unblockUI();
