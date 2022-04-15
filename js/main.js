@@ -46,6 +46,7 @@ function login(){
         success : function(data){
             $.unblockUI();
             $('#login_modal').modal('hide');
+            $('#login_button').hide();
             show_page(data['type'],data['s_type']);
         },
         error : function(err){
