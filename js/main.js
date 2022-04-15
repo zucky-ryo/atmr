@@ -120,7 +120,7 @@ function main_scroll(sw){
 }
 
 function check_item($this,user_id,item_id){
-    $.blockUI({message:'読み込み中',baseZ: 9999});
+    // $.blockUI({message:'読み込み中',baseZ: 9999});
     $.ajax({
         type : "post",
         url  : "./controller/api.php",
@@ -131,7 +131,7 @@ function check_item($this,user_id,item_id){
         },
         dataType : 'json',
         success : function(data){
-            $.unblockUI();
+            // $.unblockUI();
             if(data['res'] == 0){
                 $this.style.backgroundColor = "#b2ffb2";
                 $('#have').text(Number($('#have').text())+1);
