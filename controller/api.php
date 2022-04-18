@@ -123,7 +123,7 @@
                 }
                 $html .= sprintf("<div class='py-1' style='font-size: 10px; font-weight: bold; color: %s;'>%s</div>",$cl,$item['name']);
                 $html .= sprintf("<div class='d-flex justify-content-center'><img data-src='%s' class='lazyload' width='80%%' height='100%%'></div>",$item['img'],$item['img']);
-                $html .= sprintf("<div class='text-center mb-1' style='font-size: 10px;'>%s</div>",$item['color']);
+                $html .= sprintf("<div class='text-center mb-1' style='font-size: 10px; height: 15px;'>%s</div>",$item['color']);
                 $html .= sprintf("</div>");
             }
             $before = $item['img'];
