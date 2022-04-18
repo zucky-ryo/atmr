@@ -70,7 +70,7 @@
             "さ","し","す","せ","そ","サ","シ","ス","セ","ソ","ざ","じ","ず","ぜ","ぞ","ザ","ジ","ズ","ゼ","ゾ",
             "た","ち","つ","て","と","タ","チ","ツ","テ","ト","だ","ぢ","づ","で","ど","ダ","ヂ","ヅ","デ","ド",
             "な","に","ぬ","ね","の","ナ","ニ","ヌ","ネ","ノ",
-            "は","ひ","ふ","へ","ほ","ハ","フ","ホ","へ","ホ","ば","び","ぶ","べ","ぼ","バ","ビ","ブ","ベ","ボ","ぱ","ぴ","ぷ","ぺ","ぽ","パ","ピ","プ","ペ","ポ",
+            "は","ひ","ふ","へ","ほ","ハ","ヒ","フ","へ","ホ","ば","び","ぶ","べ","ぼ","バ","ビ","ブ","ベ","ボ","ぱ","ぴ","ぷ","ぺ","ぽ","パ","ピ","プ","ペ","ポ",
             "ま","み","む","め","も","マ","ミ","ム","メ","モ",
             "や","ゆ","よ","ヤ","ユ","ヨ",
             "ら","り","る","れ","ろ","ラ","リ","ル","レ","ロ",
@@ -104,7 +104,7 @@
                         $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' id='scroll' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                         $moku['top'] = true;
                     }else{
-                        $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
+                        $html .= sprintf("<div class='d-flex flex-direction-column justify-content-left border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                     }
                 }else{
                     $deb = "徹";
@@ -113,7 +113,7 @@
                         $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' id='scroll_%s' onclick='check_item(this,`%s`,%d)'>",$bg,$mokuji_a[$key],$_SESSION['user_id'],$item['id']);
                         $moku[$mokuji_a[$key]] = true;
                     }else{
-                        $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
+                        $html .= sprintf("<div class='d-flex flex-direction-column justify-content-left border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                     }
                 }
                 if($item['name'] == $before_name){
