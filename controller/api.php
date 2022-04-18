@@ -104,7 +104,7 @@
                         $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' id='scroll' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                         $moku['top'] = true;
                     }else{
-                        $html .= sprintf("<div class='d-flex flex-column justify-content-end border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
+                        $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                     }
                 }else{
                     $deb = "徹";
@@ -113,7 +113,7 @@
                         $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' id='scroll_%s' onclick='check_item(this,`%s`,%d)'>",$bg,$mokuji_a[$key],$_SESSION['user_id'],$item['id']);
                         $moku[$mokuji_a[$key]] = true;
                     }else{
-                        $html .= sprintf("<div class='d-flex flex-column justify-content-end border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
+                        $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                     }
                 }
                 if($item['name'] == $before_name){
@@ -121,9 +121,9 @@
                 }else{
                     $before_name = $item['name'];
                 }
-                $html .= sprintf("<div class='py-1' style='font-size: 10px; font-weight: bold; color: %s; min-height: 30px;'>%s</div>",$cl,$item['name']);
+                $html .= sprintf("<div class='py-1' style='font-size: 10px; font-weight: bold; color: %s;'>%s</div>",$cl,$item['name']);
                 $html .= sprintf("<div class='d-flex justify-content-center'><img data-src='%s' class='lazyload' width='80%%' height='100%%'></div>",$item['img'],$item['img']);
-                $html .= sprintf("<div class='text-center mb-1' style='font-size: 10px; height: 15px;'>%s</div>",$item['color']);
+                $html .= sprintf("<div class='text-center mb-1' style='font-size: 10px;'>%s</div>",$item['color']);
                 $html .= sprintf("</div>");
             }
             $before = $item['img'];
