@@ -64,7 +64,6 @@
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class=''>");
         $html .= sprintf("<div class='d-flex flex-wrap bg-light'>");
-        $before = "";
         $mokuji = [
             "あ","い","う","え","お","ア","イ","ウ","エ","オ",
             "か","き","く","け","こ","カ","キ","ク","ケ","コ","が","ぎ","ぐ","げ","ご","ガ","ギ","グ","ゲ","ゴ",
@@ -89,6 +88,7 @@
             "r","r","r","r","r","r","r","r","r","r",
             "w","w","w","w","w","w"
         ];
+        $before = ""; $before_name = "";
         $have = 0; $max = 0;
         foreach($items as $i => $item){
             if($before != $item['img']){
@@ -114,6 +114,11 @@
                     }else{
                         $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                     }
+                }
+                if($item['name'] == $before_name){
+                    $item['name'] = "";
+                }else{
+                    $before_name = $item['name'];
                 }
                 $html .= sprintf("<div class='py-1' style='font-size: 10px; font-weight: bold;'>%s</div>",$item['name']);
                 $html .= sprintf("<div class='d-flex justify-content-center'><img data-src='%s' class='lazyload' width='80%%' height='100%%'></div>",$item['img'],$item['img']);
