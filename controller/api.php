@@ -104,7 +104,7 @@
                         $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' id='scroll' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                         $moku['top'] = true;
                     }else{
-                        $html .= sprintf("<div class='d-flex flex-column justify-content-right border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
+                        $html .= sprintf("<div class='d-flex flex-column justify-content-end border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                     }
                 }else{
                     $deb = "徹";
@@ -113,7 +113,7 @@
                         $html .= sprintf("<div class='border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' id='scroll_%s' onclick='check_item(this,`%s`,%d)'>",$bg,$mokuji_a[$key],$_SESSION['user_id'],$item['id']);
                         $moku[$mokuji_a[$key]] = true;
                     }else{
-                        $html .= sprintf("<div class='d-flex flex-column justify-content-right border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
+                        $html .= sprintf("<div class='d-flex flex-column justify-content-end border border-white px-1 pointer' style='width: 20%%; min-height: 123px; background-color: %s;' onclick='check_item(this,`%s`,%d)'>",$bg,$_SESSION['user_id'],$item['id']);
                     }
                 }
                 if($item['name'] == $before_name){
