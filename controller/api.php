@@ -117,7 +117,7 @@
                     }
                 }
                 if($item['name'] == $before_name){
-                    $cl = $bg;
+                    $cl = "rgba(0,0,0,0)";
                 }else{
                     $before_name = $item['name'];
                 }
